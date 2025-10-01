@@ -1,10 +1,39 @@
-Scientific RAG Chatbot with Web Mining 🔬🤖Project OverviewThis project created a Retrieval-Augmented Generation (RAG) chatbot built on a custom knowledge base. The process began by ethically web-crawling over 60 scientific articles from ScienceDaily, followed by preprocessing and LDA Topic Modeling to extract core themes. The final chatbot leverages a hybrid retrieval and generation approach, using TF-IDF for fast document retrieval and a pre-trained GPT-2 model to generate precise, context-driven answers grounded in the source material.🚀 Key FeaturesEnd-to-End Data Pipeline: Full implementation from data acquisition (Web Mining) to deployment (Interactive Chatbot).Topic Analysis: Uses Latent Dirichlet Allocation (LDA) and visualization with pyLDAvis to understand and categorize the corpus.RAG Architecture: Implements a two-step system (Retrieve then Generate) for fact-grounded, domain-specific Q&A.User Interaction: An interactive command-line interface (CLI) for querying the scientific article knowledge base.🛠️ Techniques UsedCategoryTechniqueLibrary/ModelDescriptionWeb MiningWeb Scraping, Ethical DelaysBeautiful Soup (BS4), RequestsUsed to collect article text and links from the target website.Feature EngineeringTerm Frequency-Inverse Document FrequencyScikit-learn (TfidfVectorizer)Vectorizes the text corpus for efficient semantic search and retrieval.Unsupervised LearningLatent Dirichlet Allocation (LDA)GensimDiscovers underlying scientific topics within the "Sports" and "Cancer" categories.Generative AIRetrieval-Augmented Generation (RAG)Hugging Face (transformers), GPT-2Connects the retrieved document context to a generative model for final answer formulation.NLP PreprocessingTokenization, Stopword RemovalNLTK, SpaCyStandard cleaning and preparation of raw text data.⚙️ Installation and SetupThis project uses Python 3.10+.1. Clone the Repositorygit clone [https://github.com/your-username/scientific-rag-chatbot.git](https://github.com/your-username/scientific-rag-chatbot.git)
+# 🔬🤖 Scientific RAG Chatbot with Web Mining  
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)  
+![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-orange)  
+![Libraries](https://img.shields.io/badge/Libraries-BeautifulSoup4%2C%20scikit--learn%2C%20transformers%2C%20gensim%2C%20NLTK%2C%20SpaCy-green)  
+
+## 📌 Project Overview  
+This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built on a custom knowledge base of scientific articles. The pipeline began with **ethical web mining** of over 60 articles from *ScienceDaily*, followed by **preprocessing** and **LDA topic modeling** to extract key themes. The final chatbot integrates **document retrieval (TF-IDF)** with **generative AI (GPT-2)** to provide context-grounded, domain-specific answers.  
+
+---
+
+## 🚀 Key Features  
+- **End-to-End Data Pipeline** → From data acquisition (web mining) to deployment (interactive chatbot).  
+- **Topic Analysis** → Uses *Latent Dirichlet Allocation (LDA)* with pyLDAvis visualization.  
+- **RAG Architecture** → Two-step system: retrieve relevant text, then generate fact-grounded responses.  
+- **Interactive CLI** → Users can query the knowledge base directly in the terminal.  
+
+---
+
+## 🛠️ Techniques & Tools  
+
+| Category            | Technique                         | Library/Model                  | Description |
+|---------------------|-----------------------------------|--------------------------------|-------------|
+| **Web Mining**      | Web Scraping + Ethical Delays     | Beautiful Soup, Requests       | Collected article text and links from ScienceDaily. |
+| **NLP Preprocessing** | Tokenization, Stopword Removal   | NLTK, SpaCy                    | Cleaned and prepared raw text for modeling. |
+| **Feature Engineering** | TF-IDF Vectorization            | Scikit-learn (TfidfVectorizer) | Transformed documents into semantic vectors for retrieval. |
+| **Unsupervised Learning** | Topic Modeling                 | Gensim (LDA), pyLDAvis         | Extracted hidden themes from the article corpus. |
+| **Generative AI**   | Retrieval-Augmented Generation    | Hugging Face Transformers (GPT-2) | Combined retrieved context with a generative model for Q&A. |
+
+---
+
+## ⚙️ Installation & Setup  
+
+This project uses **Python 3.10+**.  
+
+### 1. Clone the Repository  
+```bash
+git clone https://github.com/your-username/scientific-rag-chatbot.git
 cd scientific-rag-chatbot
-2. Create and Activate Virtual EnvironmentIt is highly recommended to use a virtual environment.python -m venv venv
-# On Linux/macOS
-source venv/bin/activate
-# On Windows
-.\venv\Scripts\activate
-3. Install DependenciesInstall all required Python packages:pip install -r requirements.txt
-(Note: You will need to create a requirements.txt file from your notebook. The key libraries are beautifulsoup4, requests, nltk, spacy, scikit-learn, gensim, pyLDAvis, and transformers.)4. Run the Analysis and ChatbotThe entire pipeline, including scraping, modeling, and the interactive chatbot, is contained in the Jupyter Notebook.jupyter notebook ITC6008_AnastasovitiKontiLykosMegaritisProzymas.ipynb
-Follow the cells in the notebook sequentially. The final cell will start the interactive chatbot loop.🔮 Future WorkTo further enhance this project for production-readiness, the following steps are planned:Vector Database Integration: Replace the memory-based TF-IDF retrieval with a dedicated vector store (e.g., Pinecone or ChromaDB) for scalable and faster semantic search.Web Application Interface: Implement a simple user interface using Streamlit or Gradio to move the chatbot from the command line to a browser interface.Advanced Generative Models: Experiment with more powerful and domain-specific LLMs (e.g., specialized BERT variants or more recent decoder models) to improve answer quality and factual accuracy.Error Handling and Logging: Add robust logging and better error handling for the web scraping component to gracefully manage changing website structures.
