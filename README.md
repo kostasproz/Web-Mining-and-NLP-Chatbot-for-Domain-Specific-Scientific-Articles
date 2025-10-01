@@ -29,11 +29,4 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 
 ---
 
-## ⚙️ Installation & Setup  
 
-This project uses **Python 3.10+**.  
-
-### 1. Clone the Repository  
-```bash
-git clone https://github.com/your-username/scientific-rag-chatbot.git
-cd scientific-rag-chatbot
