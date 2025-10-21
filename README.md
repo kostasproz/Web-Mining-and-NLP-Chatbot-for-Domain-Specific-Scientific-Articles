@@ -28,55 +28,40 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 | **Generative AI**   | Retrieval-Augmented Generation    | Hugging Face Transformers (GPT-2) | Combined retrieved context with a generative model for Q&A. |
 
 ---
-📊 Results & Insights
+📊 **Results & Insights**
 
-Corpus Summary: ~60 articles from ScienceDaily across topics like AI, medicine, and climate science.
+- **Corpus Summary:** ~60 articles from *ScienceDaily* across topics like AI, medicine, and climate science.  
+- **Topic Modeling Output:** LDA revealed 5 dominant themes (e.g., *AI & Ethics*, *Medical Research*, *Environmental Studies*).  
+- **Chatbot Accuracy:** Responses are contextually grounded to retrieved documents, reducing hallucinations vs standalone GPT-2.  
+- **Visualization:** *pyLDAvis* dashboard provides interactive exploration of topic clusters.
 
-Topic Modeling Output: LDA revealed 5 dominant themes (e.g., AI & Ethics, Medical Research, Environmental Studies).
+---
 
-Chatbot Accuracy: Responses are contextually grounded to retrieved documents, reducing hallucinations compared to standalone GPT-2.
+💬 **Example Queries**
 
-Visualization: pyLDAvis dashboard provides interactive exploration of topic clusters.
+| User Query | Example Response |
+|---|---|
+| “How is AI used in medicine?” | “According to a *ScienceDaily* article, AI models assist in detecting disease patterns and improving diagnostic accuracy…” |
+| “What are recent discoveries about climate change?” | “The retrieved articles discuss melting ice rates and carbon monitoring innovations published in 2024…” |
 
-💬 Example Queries
-User Query	Example Response
-“How is AI used in medicine?”	“According to a ScienceDaily article, AI models assist in detecting disease patterns and improving diagnostic accuracy…”
-“What are recent discoveries about climate change?”	“The retrieved articles discuss melting ice rates and carbon monitoring innovations published in 2024…”
-🧩 Project Architecture
+---
 
-Data Collection:
-Ethical web mining using requests + BeautifulSoup with delay timers to respect server policies.
+🧩 **Project Architecture**
 
-Text Preprocessing:
-Lemmatization, token filtering, and stopword removal with NLTK and SpaCy.
+1. **Data Collection:** Ethical web mining using `requests` + `BeautifulSoup` with delay timers to respect server policies.  
+2. **Text Preprocessing:** Lemmatization, token filtering, and stopword removal with `NLTK` and `SpaCy`.  
+3. **Vectorization & Topic Modeling:** TF-IDF and LDA (via `Gensim`) to extract latent topics and semantic structures.  
+4. **Retrieval System:** TF-IDF similarity search to rank and retrieve most relevant text chunks.  
+5. **Generation System:** GPT-2 model fine-tuned on domain-specific data to produce context-aware responses.  
+6. **Chatbot Interface:** Command-line interface allowing dynamic user interaction and retrieval-augmented generation.
 
-Vectorization & Topic Modeling:
-TF-IDF and LDA (via Gensim) to extract latent topics and semantic structures.
+---
 
-Retrieval System:
-TF-IDF similarity search to rank and retrieve most relevant text chunks.
+📈 **Future Improvements**
 
-Generation System:
-GPT-2 model fine-tuned on domain-specific data to produce context-aware responses.
+- Integrate **FAISS** or **BM25** for faster, more accurate document retrieval.  
+- Replace GPT-2 with **Llama 3** or **Flan-T5** for higher factual consistency.  
+- Add a **Streamlit** web interface for user-friendly interaction.  
+- Expand dataset to **multiple scientific sources** for broader domain coverage.
 
-Chatbot Interface:
-Command-line interface allowing dynamic user interaction and retrieval-augmented generation.
-
-📈 Future Improvements
-
-Integrate FAISS or BM25 for faster, more accurate document retrieval.
-
-Replace GPT-2 with Llama 3 or Flan-T5 for higher factual consistency.
-
-Add a Streamlit web interface for user-friendly interaction.
-
-Expand dataset to multiple scientific sources for broader domain coverage.
-
-🧠 Learning Outcomes
-
-Hands-on experience with NLP pipelines, topic modeling, and RAG architectures.
-
-Understanding trade-offs between retrieval precision and generative creativity.
-
-Skills in data cleaning, model integration, and scientific communication.
-
+---
