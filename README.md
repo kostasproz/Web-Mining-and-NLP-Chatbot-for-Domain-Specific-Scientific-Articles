@@ -28,7 +28,7 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 | **Generative AI**   | Retrieval-Augmented Generation    | Hugging Face Transformers (GPT-2) | Combined retrieved context with a generative model for Q&A. |
 
 ---
-📊 **Results & Insights**
+## 📊 **Results & Insights**
 
 - **Corpus Summary:** ~60 articles from *ScienceDaily* across topics like AI, medicine, and climate science.  
 - **Topic Modeling Output:** LDA revealed 5 dominant themes (e.g., *AI & Ethics*, *Medical Research*, *Environmental Studies*).  
@@ -37,7 +37,7 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 
 ---
 
-💬 **Example Queries**
+## 💬 **Example Queries**
 
 | User Query | Example Response |
 |---|---|
@@ -46,7 +46,7 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 
 ---
 
-🧩 **Project Architecture**
+## 🧩 **Project Architecture**
 
 1. **Data Collection:** Ethical web mining using `requests` + `BeautifulSoup` with delay timers to respect server policies.  
 2. **Text Preprocessing:** Lemmatization, token filtering, and stopword removal with `NLTK` and `SpaCy`.  
@@ -57,7 +57,7 @@ This project developed a **Retrieval-Augmented Generation (RAG) chatbot** built 
 
 ---
 
-📈 **Future Improvements**
+## 📈 **Future Improvements**
 
 - Integrate **FAISS** or **BM25** for faster, more accurate document retrieval.  
 - Replace GPT-2 with **Llama 3** or **Flan-T5** for higher factual consistency.  
