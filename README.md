@@ -68,7 +68,7 @@ Integrate FAISS or BM25 for faster, more accurate document retrieval.
 
 Replace GPT-2 with Llama 3 or Flan-T5 for higher factual consistency.
 
-Add a web-based interface (Streamlit) for user-friendly interaction.
+Add a Streamlit web interface for user-friendly interaction.
 
 Expand dataset to multiple scientific sources for broader domain coverage.
 
@@ -76,7 +76,7 @@ Expand dataset to multiple scientific sources for broader domain coverage.
 
 Hands-on experience with NLP pipelines, topic modeling, and RAG architectures.
 
-Understanding the trade-offs between retrieval precision and generative creativity.
+Understanding trade-offs between retrieval precision and generative creativity.
 
 Skills in data cleaning, model integration, and scientific communication.
 
